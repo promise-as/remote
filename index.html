@@ -9,10 +9,12 @@
 
   <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css">
   <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
 </head>
 
 <body>
-  <div class="header">
+  <div class="header defaults_dataid" data-id="2-0-30-0-0-0-1-DBA研修">
     <div class="wrap">
       <div class="fl">
         <h1 class="h1">
@@ -24,19 +26,28 @@
       </div>
       <div class="fr">
         <ul class="nav">
-          <li>报考条件</li>
-          <li>学费咨询</li>
-          <li>证书含金量</li>
-          <li>招生简章</li>
+          <li>
+            <a href="#condition">报考条件</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="ECHATCustomMiniChat()">学费咨询</a>
+          </li>
+          <li>
+            <a href="#accept">证书含金量</a>
+          </li>
+          <li>
+            <a href="#intro">招生简章</a>
+          </li>
         </ul>
-        <div class="consult"><img src="images/consult.png" alt=""></div>
+        <a href="javascript:void(0)" onclick="ECHATCustomMiniChat()" class="consult"><img src="images/consult.png"
+            alt=""></a>
       </div>
     </div>
   </div>
   <div class="banner">
-    <a href="" style="background: url(images/banner.png) center;"></a>
+    <a style="background: url(images/banner.png) center;" href="javascript:void(0)" onclick="ECHATCustomMiniChat()"></a>
   </div>
-  <div class="condition">
+  <div class="condition" id="condition">
     <div class="c-top"></div>
     <div class="wrap">
       <div class="en-title"></div>
@@ -48,6 +59,7 @@
         <div class="c-col">
           工作年限：<span class="on">1-3年</span><span>3-5年</span><span>5年以上</span>
         </div>
+        <input type="hidden" class="assgin" class="user-con">
         <input type="text" placeholder="你的姓名" class="user-name">
         <input type="text" placeholder="手机号码" class="user-tel">
         <p class="hint">测试结果将发送到你的手机，请如实填写！</p>
@@ -96,7 +108,7 @@
       </ul>
     </div>
   </div>
-  <div class="intro">
+  <div class="intro" id="intro">
     <div class="wrap">
       <div class="en-title"></div>
       <div class="title">热门报考院校简章</div>
@@ -151,7 +163,6 @@
         </li>
       </ul>
     </div>
-
   </div>
   <div class="academy wrap">
     <div class="en-title"></div>
@@ -170,8 +181,78 @@
       <li>
         <img src="images/sfy_2.jpg" alt="" class="bg fl">
         <div class="detail fl">
+          <span class="name">香港亚洲商学院</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">马来西亚城市大学</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li class="on">
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
           <span class="name">美国索菲亚大学</span>
-          <span class="type">FMBA</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">美国雪兰多大学</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">法国布雷斯特商学院</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">英国西苏格兰</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">英国开放大学</span>
+          <span class="type">MBA</span>
+          <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
+          <div class="row">学制：1年</div>
+          <div class="row">专业：金融工商管理硕士（FMBA）</div>
+        </div>
+      </li>
+      <li>
+        <img src="images/sfy_2.jpg" alt="" class="bg fl">
+        <div class="detail fl">
+          <span class="name">波兰热舒夫大学</span>
+          <span class="type">MBA</span>
           <p>世界顶级工商管理学员在线金融硕士全美排名第<em>1</em></p>
           <div class="row">学制：1年</div>
           <div class="row">专业：金融工商管理硕士（FMBA）</div>
@@ -233,7 +314,7 @@
       </ul>
     </div>
   </div>
-  <div class="accept wrap">
+  <div class="accept wrap" id="accept">
     <div class="en-title"></div>
     <div class="title">国内认可的远程MBA</div>
     <div class="subtitle">与在校生一样的MBA学位证书·<span>国内外认可</span></div>
@@ -281,6 +362,95 @@
       </div>
     </div>
   </div>
+  <div class="courses">
+    <div class="wrap">
+      <div class="title">免费试听价值3000元MBA体验课</div>
+      <p class="hint">测试结果将发送到你的手机，请如实填写！</p>
+      <form class="sign-in">
+        <div class="c-col">
+          最高学历：<span class="on">大专</span><span>本科</span><span>其他</span>
+        </div>
+        <div class="c-col">
+          工作年限：<span class="on">1-3年</span><span>3-5年</span><span>5年以上</span>
+        </div>
+        <input type="hidden" class="assgin" class="user-con">
+        <input type="text" placeholder="你的姓名" class="user-name">
+        <input type="text" placeholder="手机号码" class="user-tel">
+        <input type="submit" value="立即测试" class="submit">
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <p>版权所有深圳市诺达教育股份有限公司</p>
+    <span>©www.thea.cn All Rights Reserved 粤ICP备10032899号</span>
+  </div>
+  <!-- 右侧导航 -->
+  <div class="right-nav">
+    <div class="n-name">远程MBA</div>
+    <div class="n-enname">REMOTE</div>
+    <a href="#condition">报考条件</a>
+    <a href="#intro">招生简章</a>
+    <a href="javascript:void(0)" onclick="ECHATCustomMiniChat()">在线咨询</a>
+    <div class="to-top"></div>
+  </div>
+  <!-- 弹窗 -->
+  <div class="dialog">
+    <div class="d-cont">
+      <i class="close"></i>
+      <div class="c-title"><img src="images/icon_3.png" alt="">在线测试<img src="images/icon_3.png" alt=""></div>
+      <div class="c-title">你能考哪所MBA院校</div>
+      <form class="sign-in">
+        <div class="c-col">
+          最高学历：<span class="on">大专</span><span>本科</span><span>其他</span>
+        </div>
+        <div class="c-col">
+          工作年限：<span class="on">1-3年</span><span>3-5年</span><span>5年以上</span>
+        </div>
+        <input type="hidden" class="assgin" class="user-con">
+        <input type="text" placeholder="请输入您的姓名" class="user-name">
+        <input type="text" placeholder="请输入您的手机号码" class="user-tel">
+        <input type="submit" value="立即测试" class="submit">
+      </form>
+      <p class="hint">*测试结果将以短信的信息发送到你的手机</p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://img.thea.cn/public/js/thea.ms.form.js"></script>
+  <script src="js/index.js"></script>
+  <script type="text/javascript">
+    var _echatServer = ['v.rainbowred.com'];
+    window._echat = window._echat || function () {
+      (_echat.q = _echat.q || []).push(arguments)
+    };
+    _echat.l = +new Date;
+    _echat('initParam', {
+      companyId: 378
+    });
+    _echat('initParam', {
+      echatTag: '竞价-研修2'
+    });
+    (function () {
+      var echat = document.createElement('script');
+      echat.type = 'text/javascript';
+      echat.async = true;
+      echat.id = 'echatmodulejs';
+      echat.setAttribute('charset', 'UTF-8');
+      echat.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'vs.rainbowred.com/visitor/echat.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(echat, s);
+    })();
+
+    function ECHATCustomMiniChat(echatTag, visEvt, lan, metaData, myData, routeEntranceId) {
+      var customObj = {};
+      echatTag && (customObj.echatTag = echatTag);
+      visEvt && (customObj.visEvt = JSON.stringify(visEvt));
+      lan && (customObj.lan = lan);
+      metaData && (customObj.metaData = metaData);
+      myData && (customObj.myData = myData);
+      routeEntranceId && (customObj.routeEntranceId = routeEntranceId);
+      ECHAT.customMiniChat(customObj);
+    }
+  </script>
 </body>
 
 </html>

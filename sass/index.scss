@@ -1,14 +1,43 @@
-input {
+input,
+select {
   font-family: "Microsoft YaHei";
+  border: 0;
 }
 input[type="submit"] {
   cursor: pointer;
   font-family: "Microsoft YaHei";
 }
+input[type="text"],
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &::-webkit-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &::-moz-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: #999;
+    font-size: inherit;
+  }
+}
 p {
   line-height: 1.6;
 }
 $bg-color: #b5243c;
+a {
+  &:hover {
+    color: $bg-color;
+  }
+}
 %clearfix {
   zoom: 1;
   &:after {
@@ -58,7 +87,7 @@ body {
     @extend %in-b;
     padding: 0 40px;
     border-right: 1px dotted #202334;
-    cursor: pointer;
+    // cursor: pointer;
     &:hover {
       color: $bg-color;
     }
@@ -73,7 +102,7 @@ body {
   cursor: pointer;
 }
 .banner {
-  display: none;
+  // display: none;
   a {
     display: block;
     height: 460px;
@@ -92,11 +121,11 @@ body {
   text-align: center;
 }
 .condition {
-  display: none;
+  // display: none;
   padding: 40px 0 37px;
   position: relative;
   margin-bottom: 33px;
-  background-color: #b5243c;
+  background-color: $bg-color;
   .c-top {
     position: absolute;
     top: -46px;
@@ -170,13 +199,13 @@ body {
     position: absolute;
     bottom: -33px;
     left: 0;
-    width: 94%;
+    width: 93%;
     height: 82px;
     background: url(../images/red-bg.png);
   }
 }
 .question {
-  display: none;
+  // display: none;
   padding: 50px 0 32px;
   .q-cont {
     // height: 520px;
@@ -229,7 +258,7 @@ body {
   }
 }
 .intro {
-  display: none;
+  // display: none;
   padding: 60px 0 34px;
   background: url(../images/bg_1.png) no-repeat;
   ul {
@@ -270,10 +299,11 @@ body {
   }
 }
 .academy {
-  display: none;
+  // display: none;
   padding: 60px 0 102px;
   .a-head {
     padding: 0 80px;
+    margin-bottom: 22px;
     text-align: center;
     span {
       @extend %in-b;
@@ -294,6 +324,10 @@ body {
   .a-cont {
     li {
       @extend %clearfix;
+      display: none;
+      &.on{
+        display: block;
+      }
       .bg {
         margin-right: 32px;
       }
@@ -339,8 +373,7 @@ body {
   }
 }
 .job {
-  display: none;
-  padding-bottom: 56px;
+  // display: none;
   .j-head {
     position: relative;
     padding: 30px 0;
@@ -418,6 +451,8 @@ body {
   }
 }
 .accept {
+  // display: none;
+  padding-top: 56px;
   .title {
     margin-bottom: 20px;
   }
@@ -433,7 +468,7 @@ body {
   }
 }
 .select {
-  padding-bottom: 60px;
+  padding: 18px 0 60px;
   .s-cont {
     @extend %clearfix;
     padding-top: 50px;
@@ -449,25 +484,260 @@ body {
         bottom: 0;
         left: 40px;
         margin: auto;
+        height: 466px;
       }
     }
     .c-right {
       float: left;
       width: 408px;
-      padding: 0 87px 0 193px;
-      height: 546px;
+      height: 456px;
+      padding: 90px 100px 0 150px;
       background-color: #b5243c;
       .r-title {
-        font-size: 24px;
         line-height: 25px;
+        margin-bottom: 20px;
+        font-size: 24px;
         color: #ffffff;
-        img, span{
+        text-align: center;
+        img,
+        span {
           vertical-align: middle;
         }
-        img{
+        img {
           margin: 0 8px;
         }
       }
+      .sign-in {
+        color: #fff;
+      }
+      p {
+        line-height: 32px;
+      }
+      select,
+      input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 18px;
+        border-radius: 6px;
+      }
+      select {
+        padding: 0 1em;
+        background: url(../images/icon_2.png) no-repeat #fff 96%;
+      }
+      input {
+        text-indent: 1em;
+        background-color: #ffffff;
+      }
+      input[type="submit"] {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #ffffff;
+        text-indent: 0;
+        background-color: #cbaf69;
+        border-radius: 26px;
+      }
+    }
+  }
+}
+.courses {
+  // display: none;
+  padding: 60px 0 30px;
+  background-color: #f1f1f1;
+  .title {
+    margin-bottom: 0;
+    color: $bg-color;
+    font-weight: bold;
+  }
+  .sign-in {
+    padding-left: 190px;
+    @extend %clearfix;
+  }
+  .c-col {
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    span {
+      padding-left: 25px;
+      margin-right: 30px;
+      font-size: 16px;
+      font-weight: normal;
+      background: url(../images/c2-nor.png) no-repeat left;
+      cursor: pointer;
+      &.on {
+        background: url(../images/c2-sel.png) no-repeat left;
+      }
+    }
+  }
+  input {
+    width: 398px;
+    height: 48px;
+    line-height: 48px;
+    margin-right: 18px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: solid 1px #dddddd;
+    text-indent: 1em;
+    font-size: 16px;
+  }
+  .hint {
+    line-height: 49px;
+    margin-bottom: 17px;
+    font-size: 14px;
+    letter-spacing: 14px;
+    color: #666666;
+    text-align: center;
+  }
+  .submit {
+    z-index: 100;
+    margin-left: 210px;
+    font-size: 18px;
+    border-radius: 25px;
+    text-indent: 0;
+    background: $bg-color;
+    color: #fff;
+    box-shadow: 0px 7px 7px 0px rgba(163, 31, 53, 0.24);
+  }
+}
+.footer{
+  padding: 27px 0;
+  background-color: #333333;
+  
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.right-nav {
+  width: 162px;
+  height: 289px;
+  padding: 30px 0 0;
+  position: fixed;
+  top: 30%;
+  right: 6%;
+  background: url(../images/r-nav.png) no-repeat;
+  text-align: center;
+  .n-name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .n-enname {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 50px;
+    letter-spacing: 7px;
+    color: #ffffff;
+  }
+  a {
+    @extend %in-b;
+    width: 112px;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 18px;
+    border: solid 1px #cbaf69;
+    background-color: #ffffff;
+  }
+  .to-top {
+    width: 64px;
+    height: 30px;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+  }
+}
+.dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mask.png);
+  .d-cont {
+    width: 524px;
+    height: 332px;
+    padding: 30px 0 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -181px;
+    left: 50%;
+    margin-left: -262px;
+    background: url(../images/popup-bg.jpg) no-repeat;
+    i {
+      position: absolute;
+      top: 24px;
+      right: 25px;
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+    }
+    .c-title {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+      color: $bg-color;
+      text-align: center;
+      img {
+        vertical-align: middle;
+        margin: 0 10px;
+      }
+    }
+    .sign-in {
+      padding-left: 43px;
+      padding-top: 20px;
+    }
+    .c-col {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      span {
+        padding-left: 25px;
+        margin-right: 30px;
+        font-size: 16px;
+        font-weight: normal;
+        background: url(../images/c2-nor.png) no-repeat left;
+        cursor: pointer;
+        &.on {
+          background: url(../images/c2-sel.png) no-repeat left;
+        }
+      }
+    }
+    input {
+      width: 212px;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      border: solid 1px #dddddd;
+      text-indent: 1em;
+      font-size: 16px;
+    }
+    .submit {
+      margin-left: 100px;
+      margin-bottom: 0;
+      font-size: 18px;
+      border-radius: 25px;
+      text-indent: 0;
+      background: $bg-color;
+      color: #fff;
+      box-shadow: 0px 7px 7px 0px rgba(163, 31, 53, 0.24);
+    }
+    .hint {
+      line-height: 30px;
+      text-align: center;
     }
   }
 }
